@@ -3,14 +3,15 @@
 
 const test = QUnit.test;
 
-test('time to test a function', function(assert) {
+test('Fake Test', function(assert) {
     //Arrange
     // Set up your parameters and expectations
-
+    const me = true;
+    const you = true
     //Act 
     // Call the function you're testing and set the result to a const
 
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(true, false);
+    assert.equal(me, you);
 });
