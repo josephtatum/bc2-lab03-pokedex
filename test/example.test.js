@@ -7,7 +7,7 @@ test('Fake Test', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const me = true;
-    const you = true
+    const you = true;
     //Act 
     // Call the function you're testing and set the result to a const
 
