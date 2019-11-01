@@ -5,11 +5,10 @@ export class PokemonList extends Component {
 
     onRender(dom) {
         const pokemon = (this.props.pokemon);
-        console.log(pokemon);
+        
         pokemon.forEach(pokemon => {
             const props = { pokemon };
             const pokemonItem = new PokemonItem(props).renderDOM();
-            console.log(pokemonItem)
             dom.appendChild(pokemonItem);
         });
     }
