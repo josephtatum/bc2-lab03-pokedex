@@ -2,10 +2,7 @@ import Component from './Component.js';
 import { Header } from './Header.js';
 import { PokemonList } from './Pokemon-List.js';
 import { Footer } from './Footer.js';
-import { getPokemon } from '../data/pokemon-api.js';
-
-
-
+import { getPokemon } from '../services/pokemon-api.js';
 export class App extends Component {
 
     async onRender(dom) {
