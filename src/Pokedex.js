@@ -3,7 +3,8 @@ import { Header } from './Header.js';
 import { PokemonList } from './Pokemon-List.js';
 import { Footer } from './Footer.js';
 import { getPokemon } from '../services/pokemon-api.js';
-export class App extends Component {
+
+export class Pokedex extends Component {
 
     async onRender(dom) {
         const header = new Header().renderDOM();
@@ -29,3 +30,7 @@ export class App extends Component {
         `;
     }
 }
+
+const app = new Pokedex();
+const dom = app.renderDOM();
+document.body.prepend(dom);
