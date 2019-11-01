@@ -1,0 +1,34 @@
+import Component from './Component.js';
+import { Header } from './Header.js';
+import { PokemonList } from './Pokemon-List.js';
+import { Footer } from './Footer.js';
+import { getPokemon } from '../data/pokemon-api.js';
+
+
+
+export class App extends Component {
+
+    async onRender(dom) {
+        const header = new Header().renderDOM();
+        dom.appendChild(header);
+
+        const pokemonList = new PokemonList({ pokemon: [] });
+        const domPokemonList = pokemonList.renderDOM();
+        dom.appendChild(domPokemonList);
+
+        const response = await getPokemon();
+        const pokemon = response.results;
+
+        pokemonList.update({ pokemon: pokemon });
+
+        const footer = new Footer().renderDOM();
+        dom.appendChild(footer);
+    }
+
+    renderHTML() {
+        return /*html*/`
+        <div class="page-wrapper">
+        </div>
+        `;
+    }
+}
