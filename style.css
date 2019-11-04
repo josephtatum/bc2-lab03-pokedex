@@ -33,6 +33,14 @@ footer {
     padding: 25px 0;
 }
 
+.pokedex-heading a {
+    text-decoration: none;
+}
+
+.pokedex-heading a:visited {
+    color: black;  
+}
+
 .filter-nav {
     display: flex;
     justify-content: center;
@@ -129,6 +137,12 @@ footer {
     margin: 20px 20px;
 }
 
+button.previous-page, button.next-page {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
 .right-arrow, .left-arrow {
     height: 12px;
 }
@@ -147,6 +161,14 @@ footer {
         background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(134,99,0,1) 25%, rgba(0,106,7,1) 50%, rgba(0,22,255,1) 75%, rgba(158,0,255,1) 100%);
         color: white;
         margin: 0 0 5px;
+    }
+
+    .pokedex-heading a {
+        color:white;
+    }
+
+    .pokedex-heading a:visited {
+        color:white;
     }
 
     header {
