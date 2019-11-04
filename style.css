@@ -9,6 +9,14 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
 h1 {
     margin: 10px 0 5px;
 }
@@ -48,13 +56,15 @@ footer {
     align-items: center;
 }
 
-.typefilter, .searchbox, .numberbox, .search-button {
+.typefilter, .searchbox, .numberbox, .search-button, .reset-button {
+    font-family: 'Pokemon', -apple-system, Helvetica, sans-serif;
     border: 2px solid black;
     background-color: white;
     background-repeat: no-repeat;
     height: 40px;
     box-sizing: border-box;
     background-position: 5%;
+    margin-bottom: 5px;
     border-radius: 5px;
 }
 
@@ -63,7 +73,6 @@ footer {
 }
 
 .numberbox {
-    font-family: 'Pokemon', -apple-system, Helvetica, sans-serif;
     background-image: url("./assets/number.svg");
     background-size: 20px;
     padding-left:25px;
@@ -71,7 +80,6 @@ footer {
     width:135px;
     text-indent: 15px;
     line-height: 4;
-    margin-bottom: 5px;
     position: relative;
 }
 
@@ -82,7 +90,6 @@ footer {
     padding:10px;
     width: 150px;
     text-indent: 25px;
-    margin-bottom: 5px;
     -o-appearance: none;
    -ms-appearance: none;
    -webkit-appearance: none;
@@ -91,7 +98,6 @@ footer {
 }
 
 .searchbox {
-    font-family: 'Pokemon', -apple-system, Helvetica, sans-serif;
     background-image: url("./assets/search.svg");
     background-size: 20px;
     padding-left:25px;
@@ -99,14 +105,13 @@ footer {
     border-radius: 5px;
     text-indent: 15px;
     line-height: 4;
-    margin-bottom: 5px;
     position: relative;
     width: 200px;
 }
 
 .search-button {
     margin-left: 5px;
-    font-family: 'Pokemon';
+    margin-right: 5px;
     cursor: pointer;
 }
 

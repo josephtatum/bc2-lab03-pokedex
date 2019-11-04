@@ -3,6 +3,7 @@ import Component from './component.js';
 export class Filter extends Component {
     
     onRender(form) {
+        const resetButton = form.querySelector('.reset-button');
         const nameSearch = form.querySelector('#name-search');
         const numberSearch = form.querySelector('#number-search');
         const typeSearch = form.querySelector('#type-search');
@@ -10,12 +11,13 @@ export class Filter extends Component {
         
 
         function updateControls() {
-            const queryString = '';
+            const queryString = window.location.hash.slice(1);
             const searchParams = new URLSearchParams(queryString);
-
-            nameSearch.value = searchParams.get('s') || '';
-            numberSearch.value = searchParams.get('number') || '';
+            
+            nameSearch.value = searchParams.get('pokemon') || '';
+            numberSearch.value = searchParams.get('id') || '';
             typeSearch.value = searchParams.get('type') || '';
+            
         }
 
         updateControls();
@@ -29,8 +31,8 @@ export class Filter extends Component {
             const formData = new FormData(form);
             let queryString;
             const searchParams = new URLSearchParams(queryString);
-
             searchParams.set('page', 1);
+
             if (nameSearch.value) {
                 searchParams.set('pokemon', formData.get('name'));
             }
@@ -45,6 +47,10 @@ export class Filter extends Component {
             
             window.location.hash = searchParams.toString();
 
+        });
+
+        resetButton.addEventListener('click', () => {
+            window.location
         });
 
 
@@ -77,6 +83,7 @@ export class Filter extends Component {
                     <option value="fairy">fairy</option>
                 </select>
                 <button class="search-button">search</button>
+                <button class="reset-button" type="reset"><a href="../pokedex">reset</a></button>
             </form>
 `;
     }
