@@ -57,7 +57,24 @@ export class Filter extends Component {
                 <input type="search" id="number-search" name="number" placeholder="number" class="numberbox">
                 <select name="type" class="typefilter" id="type-search">
                     <option value="">all types</option>
+                    <option value="normal">normal</option>
+                    <option value="fire">fire</option>
+                    <option value="grass">grass</option>
+                    <option value="water">water</option>
+                    <option value="flying">flying</option>
+                    <option value="poison">poison</option>
+                    <option value="electric">electric</option>
+                    <option value="rock">rock</option>
+                    <option value="ground">ground</option>
+                    <option value="ice">ice</option>
+                    <option value="bug">bug</option>
+                    <option value="ghost">ghost</option>
                     <option value="psychic">psychic</option>
+                    <option value="fighting">fighting</option>
+                    <option value="steel">steel</option>
+                    <option value="dark">dark</option>
+                    <option value="dragon">dragon</option>
+                    <option value="fairy">fairy</option>
                 </select>
                 <button class="search-button">search</button>
             </form>
