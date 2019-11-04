@@ -55,7 +55,7 @@ export class Pagination extends Component {
         const queryString = window.location.hash.slice(1);
         const searchParams = new URLSearchParams(queryString);
         const totalResults = this.props.totalResults;
-        console.log(totalResults)
+        const lastPage = Math.ceil((totalResults / 20));
         let page = 1;
       
         const parsedPage = parseInt(searchParams.get('page'));
@@ -68,8 +68,8 @@ export class Pagination extends Component {
         return /*html */`
         <nav class="pagination">
             <button class="previous-page" style="display: ${page === 1 ? 'none' : ''}" ${page === 1 ? 'disabled' : ''}><img class="left-arrow" src="../assets/arrow.svg" alt="previous-page"></button>
-            <span class="current-page">${page}</span> of <span class="total-pages">30</span>
-            <button class="next-page"><img class="right-arrow" src="../assets/arrow.svg" alt="next-page"></button>
+            <span class="current-page">${page}</span> of <span class="total-pages">${lastPage}</span>
+            <button class="next-page" style="display: ${lastPage === page ? 'none' : ''}" ${lastPage === page ? 'disabled' : ''}><img class="right-arrow" src="../assets/arrow.svg" alt="next-page"></button>
         </nav>
 `;
     }
