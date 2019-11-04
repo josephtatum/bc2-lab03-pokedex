@@ -40,7 +40,7 @@ footer {
     align-items: center;
 }
 
-.typefilter, .searchbox, .numberbox {
+.typefilter, .searchbox, .numberbox, .search-button {
     border: 2px solid black;
     background-color: white;
     background-repeat: no-repeat;
@@ -50,7 +50,7 @@ footer {
     border-radius: 5px;
 }
 
-.searchbox:focus, .typefilter:focus, .numberbox:focus {
+.searchbox:focus, .typefilter:focus, .numberbox:focus, .search-button:focus {
     outline:0;
 }
 
@@ -74,7 +74,7 @@ footer {
     padding:10px;
     width: 150px;
     text-indent: 25px;
-    box-sizing: border-box;
+    margin-bottom: 5px;
     -o-appearance: none;
    -ms-appearance: none;
    -webkit-appearance: none;
@@ -94,6 +94,12 @@ footer {
     margin-bottom: 5px;
     position: relative;
     width: 200px;
+}
+
+.search-button {
+    margin-left: 5px;
+    font-family: 'Pokemon';
+    cursor: pointer;
 }
 
 .searchbox::-webkit-search-cancel-button{
@@ -153,9 +159,13 @@ footer {
     header {
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
         align-items: center;
     }
 
+    .filter-nav {
+
+    }
     .pokemon-list {
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 15px;
@@ -164,6 +174,10 @@ footer {
 }
 
 @media (min-width: 1024px) {
+
+    header {
+        flex-direction: row;
+    }
     .pokemon-list {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 20px;

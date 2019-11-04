@@ -12,6 +12,7 @@ export class Header extends Component {
                 <option value="">all types</option>
                 <option value="psychic">psychic</option>
             </select>
+            <button class="search-button">search</button>
         </nav>
     </header>
 `;
