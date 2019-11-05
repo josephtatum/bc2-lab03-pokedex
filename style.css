@@ -149,7 +149,10 @@ footer {
 }
 
 .pagination {
-    margin: 20px 20px;
+    padding: 20px 20px;
+    background: rgba(255, 255, 255, 0.5);
+    position: sticky;
+    top: 302px;
 }
 
 button.previous-page, button.next-page {
@@ -192,6 +195,10 @@ button.previous-page, button.next-page {
         padding: 25px;
     }
 
+    .pagination {
+        top: 130px
+    }
+
     .filter-nav {
         flex-direction: row;
         align-items: unset;
@@ -227,6 +234,7 @@ button.previous-page, button.next-page {
 
     .pagination {
         text-align: right;
+        top: 95px;
     }
     
     .pokemon-list {
